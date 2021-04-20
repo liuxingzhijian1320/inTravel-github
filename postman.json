@@ -1,0 +1,1651 @@
+{
+	"info": {
+		"_postman_id": "966a8167-475d-4662-90fc-699ca513221f",
+		"name": "自游API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "用户",
+			"item": [
+				{
+					"name": "新增用户",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nickname",
+									"value": "大海",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "1102312123@qq.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:1155/api/user/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1155",
+							"path": [
+								"api",
+								"user",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "删除用户",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "4",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:1155/api/user/del",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1155",
+							"path": [
+								"api",
+								"user",
+								"del"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "编辑用户",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IjEyMyIsInVzZXJJZCI6MSwiaWF0IjoxNjE2NDk3MzE1fQ.grrvMncXbvky3anJ9k5Eo3NdECJfYxmLVk847U9iae4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "nickname",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "zhs1320@163.com",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "born",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:1155/api/user/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1155",
+							"path": [
+								"api",
+								"user",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "修改密码",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "888",
+									"type": "text"
+								},
+								{
+									"key": "newPassword",
+									"value": "888999",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:1155/api/user/updatePassword",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1155",
+							"path": [
+								"api",
+								"user",
+								"updatePassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "发送验证码",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "zhs1320@163.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:1155/api/email/send",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1155",
+							"path": [
+								"api",
+								"email",
+								"send"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "找回密码",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "code",
+									"value": "367496",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "zhs1320@163.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:1155/api/user/resetPassword",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1155",
+							"path": [
+								"api",
+								"user",
+								"resetPassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "用户登录",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "zhs1320@163.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:1155/api/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1155",
+							"path": [
+								"api",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "用户\b列表",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:1155/api/user/list?pageSize=12&pageIndex=1&nickname=&email=",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1155",
+							"path": [
+								"api",
+								"user",
+								"list"
+							],
+							"query": [
+								{
+									"key": "pageSize",
+									"value": "12"
+								},
+								{
+									"key": "pageIndex",
+									"value": "1"
+								},
+								{
+									"key": "nickname",
+									"value": ""
+								},
+								{
+									"key": "email",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "用户\b详情",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:1155/api/user/detail?id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1155",
+							"path": [
+								"api",
+								"user",
+								"detail"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "文件",
+			"item": [
+				{
+					"name": "上传文件",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": ""
+								},
+								{
+									"key": "bucket",
+									"value": "hotel_1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:1155/api/file/upload",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1155",
+							"path": [
+								"api",
+								"file",
+								"upload"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "酒店",
+			"item": [
+				{
+					"name": "新增酒店",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "北京行宫国际酒店",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "中国，北京，石佛营东里155号",
+									"type": "text"
+								},
+								{
+									"key": "lat",
+									"value": "39.932552",
+									"type": "text"
+								},
+								{
+									"key": "lng",
+									"value": "116.508331",
+									"type": "text"
+								},
+								{
+									"key": "desc",
+									"value": "北京行宫国际酒店位于朝阳区石佛营东里，西邻朝阳公园，东邻平房公园，毗邻燕莎和国贸区域。\n北京行宫国际酒店耗资数十亿，是一家主题式概念酒店。酒店融合中西方艺术特色为一体，处处加入文化、历史、艺术的元素，将古典与时尚完美触碰、传统与现代有机结合。酒店客房由梦幻水晶灯、华丽镀金卫浴、精致家具、超大柔软沙发等元素构成，环境优越，让人耳目一新。\n酒店拥有宫廷式水疗养生中心、基因检测中心、抗衰老健康会所、婚纱影视制作基地等，带来了一股时尚的风潮，诚邀您前来亲身感受。",
+									"type": "text"
+								},
+								{
+									"key": "cover",
+									"value": "http://localhost:1155/public/images/hotel_4/2021-03-25-14-19-45-790.jpeg",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "253",
+									"type": "text"
+								},
+								{
+									"key": "grade",
+									"value": "4.3",
+									"type": "text"
+								},
+								{
+									"key": "pics",
+									"value": "http://localhost:1155/public/images/hotel_4/2021-03-25-14-19-45-790.jpeg,http://localhost:1155/public/images/hotel_4/2021-03-25-14-20-03-867.jpeg",
+									"type": "text"
+								},
+								{
+									"key": "max",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:1155/api/hotel/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1155",
+							"path": [
+								"api",
+								"hotel",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "\b编辑酒店",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "三亚酒店234234234",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "\b三亚市昌平区",
+									"type": "text"
+								},
+								{
+									"key": "lat",
+									"value": "121.0011",
+									"type": "text"
+								},
+								{
+									"key": "lng",
+									"value": "31.0021",
+									"type": "text"
+								},
+								{
+									"key": "desc",
+									"value": "这是大酒店这是大酒店这是大酒店这是大酒店这是大酒店这是大酒店\n",
+									"type": "text"
+								},
+								{
+									"key": "cover",
+									"value": "http://localhost:1155/public/images/2021/03/23/2021-03-23-20-13-13-661.jpeg",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "129",
+									"type": "text"
+								},
+								{
+									"key": "grade",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "pics",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "max",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:1155/api/hotel/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1155",
+							"path": [
+								"api",
+								"hotel",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "删除酒店",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "21",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:1155/api/hotel/del",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1155",
+							"path": [
+								"api",
+								"hotel",
+								"del"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "酒店详情",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:1155/api/hotel/detail?id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1155",
+							"path": [
+								"api",
+								"hotel",
+								"detail"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "酒店列表",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:1155/api/hotel/list?pageIndex=1&pageSize=12&type=lower",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1155",
+							"path": [
+								"api",
+								"hotel",
+								"list"
+							],
+							"query": [
+								{
+									"key": "pageIndex",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "12"
+								},
+								{
+									"key": "type",
+									"value": "lower"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "房间",
+			"item": [
+				{
+					"name": "新增房间",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "豪华包间",
+									"type": "text"
+								},
+								{
+									"key": "hotel_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "cover",
+									"value": "http://localhost:1155/public/images/hotel_1/2021-03-27-22-30-13-796.png",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "111",
+									"type": "text"
+								},
+								{
+									"key": "max",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:1155/api/room/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1155",
+							"path": [
+								"api",
+								"room",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "\b编辑房间",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "7",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "豪华包间22",
+									"type": "text"
+								},
+								{
+									"key": "hotel_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "cover",
+									"value": "http://localhost:1155/public/images/hotel_1/2021-03-27-22-30-13-796.png",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "11122",
+									"type": "text"
+								},
+								{
+									"key": "max",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:1155/api/room/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1155",
+							"path": [
+								"api",
+								"room",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "删除房间",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "7",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:1155/api/room/del",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1155",
+							"path": [
+								"api",
+								"room",
+								"del"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "房间详情",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:1155/api/room/detail?id=7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1155",
+							"path": [
+								"api",
+								"room",
+								"detail"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "7"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "房间列表",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:1155/api/room/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1155",
+							"path": [
+								"api",
+								"room",
+								"list"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "评论",
+			"item": [
+				{
+					"name": "新增评论",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "hotel_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "我是来评论的123123123123",
+									"type": "text"
+								},
+								{
+									"key": "user_id",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:1155/api/comment/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1155",
+							"path": [
+								"api",
+								"comment",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "评论列表",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:1155/api/comment/list?hotel_id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1155",
+							"path": [
+								"api",
+								"comment",
+								"list"
+							],
+							"query": [
+								{
+									"key": "hotel_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "评论详情",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:1155/api/comment/detail?id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1155",
+							"path": [
+								"api",
+								"comment",
+								"detail"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "评论删除",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:1155/api/comment/del",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1155",
+							"path": [
+								"api",
+								"comment",
+								"del"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "评论编辑",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "123123123123123123123123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:1155/api/comment/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1155",
+							"path": [
+								"api",
+								"comment",
+								"update"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "回复",
+			"item": [
+				{
+					"name": "新增回复",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "comment_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "我是来评论的123123123123",
+									"type": "text"
+								},
+								{
+									"key": "from_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "to_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:1155/api/reply/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1155",
+							"path": [
+								"api",
+								"reply",
+								"create"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "搜索记录",
+			"item": [
+				{
+					"name": "搜素记录创建",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "user_id",
+									"value": "9",
+									"type": "text"
+								},
+								{
+									"key": "hotel_id",
+									"value": "7",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:1155/api/record/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1155",
+							"path": [
+								"api",
+								"record",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "搜素记录查询",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "北京行宫国际酒店",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "中国，北京，石佛营东里155号",
+									"type": "text"
+								},
+								{
+									"key": "lat",
+									"value": "39.932552",
+									"type": "text"
+								},
+								{
+									"key": "lng",
+									"value": "116.508331",
+									"type": "text"
+								},
+								{
+									"key": "desc",
+									"value": "北京行宫国际酒店位于朝阳区石佛营东里，西邻朝阳公园，东邻平房公园，毗邻燕莎和国贸区域。\n北京行宫国际酒店耗资数十亿，是一家主题式概念酒店。酒店融合中西方艺术特色为一体，处处加入文化、历史、艺术的元素，将古典与时尚完美触碰、传统与现代有机结合。酒店客房由梦幻水晶灯、华丽镀金卫浴、精致家具、超大柔软沙发等元素构成，环境优越，让人耳目一新。\n酒店拥有宫廷式水疗养生中心、基因检测中心、抗衰老健康会所、婚纱影视制作基地等，带来了一股时尚的风潮，诚邀您前来亲身感受。",
+									"type": "text"
+								},
+								{
+									"key": "cover",
+									"value": "http://localhost:1155/public/images/hotel_4/2021-03-25-14-19-45-790.jpeg",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "253",
+									"type": "text"
+								},
+								{
+									"key": "grade",
+									"value": "4.3",
+									"type": "text"
+								},
+								{
+									"key": "pics",
+									"value": "http://localhost:1155/public/images/hotel_4/2021-03-25-14-19-45-790.jpeg,http://localhost:1155/public/images/hotel_4/2021-03-25-14-20-03-867.jpeg",
+									"type": "text"
+								},
+								{
+									"key": "max",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:1155/api/record/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1155",
+							"path": [
+								"api",
+								"record",
+								"create"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "订单",
+			"item": [
+				{
+					"name": "新增",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "hotel_id",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "user_id",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "room_id",
+									"value": "8",
+									"type": "text"
+								},
+								{
+									"key": "people",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "rooms",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "start",
+									"value": "2021/04/01",
+									"type": "text"
+								},
+								{
+									"key": "end",
+									"value": "2021/04/04",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:1155/api/order/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1155",
+							"path": [
+								"api",
+								"order",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "删除",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "21",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:1155/api/order/del",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1155",
+							"path": [
+								"api",
+								"order",
+								"del"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "详情",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:1155/api/order/detail?id=7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1155",
+							"path": [
+								"api",
+								"order",
+								"detail"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "7"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "列表",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:1155/api/order/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "1155",
+							"path": [
+								"api",
+								"order",
+								"list"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
