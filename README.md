@@ -12,7 +12,7 @@
 
 ### 预览图
 
-!(http://api.sanzhikaola.com/public/images/hotel/2021-04-20-14-43-28-819.png)
+![](http://api.sanzhikaola.com/public/images/hotel/2021-04-20-14-43-28-819.png)
 
 ### 配置数据库
 
@@ -59,13 +59,13 @@ INSERT INTO `demosql`.`user`(`nickname`, `password`, `email`, `admin`) VALUES ( 
 - 登录 用新创建的账号密码
 
 登录及其内部操作截图
-!(http://api.sanzhikaola.com/public/images/hotel/2021-04-20-15-21-15-195.png)
-!(http://api.sanzhikaola.com/public/images/hotel/2021-04-20-15-19-05-165.png)
-!(http://api.sanzhikaola.com/public/images/hotel/2021-04-20-15-19-25-992.png)
-!(http://api.sanzhikaola.com/public/images/hotel/2021-04-20-15-19-35-430.png)
-!(http://api.sanzhikaola.com/public/images/hotel/2021-04-20-15-19-47-112.png)
-!(http://api.sanzhikaola.com/public/images/hotel/2021-04-20-15-19-58-197.png)
-!(http://api.sanzhikaola.com/public/images/hotel/2021-04-20-15-20-07-906.png)
+![](http://api.sanzhikaola.com/public/images/hotel/2021-04-20-15-21-15-195.png)  
+![](http://api.sanzhikaola.com/public/images/hotel/2021-04-20-15-19-05-165.png)  
+![](http://api.sanzhikaola.com/public/images/hotel/2021-04-20-15-19-25-992.png)  
+![](http://api.sanzhikaola.com/public/images/hotel/2021-04-20-15-19-35-430.png)  
+![](http://api.sanzhikaola.com/public/images/hotel/2021-04-20-15-19-47-112.png)  
+![](http://api.sanzhikaola.com/public/images/hotel/2021-04-20-15-19-58-197.png)  
+![](http://api.sanzhikaola.com/public/images/hotel/2021-04-20-15-20-07-906.png)
 
 - 功能
 
