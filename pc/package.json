@@ -1,0 +1,41 @@
+{
+    "name": "nuxtDemo",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "dev": "nuxt",
+        "build": "nuxt build",
+        "start": "nuxt start",
+        "generate": "nuxt generate",
+        "pm2": "pm2 start ./ecosystem.config.js  --env production"
+    },
+    "dependencies": {
+        "@nuxtjs/axios": "^5.12.5",
+        "@nuxtjs/pwa": "^3.3.5",
+        "babel-plugin-component": "^1.1.1",
+        "core-js": "^3.8.3",
+        "element-ui": "^2.15.1",
+        "ip": "^1.1.5",
+        "md5": "^2.3.0",
+        "nuxt": "^2.14.12",
+        "sass": "^1.32.8",
+        "sass-loader": "10.1.1",
+        "swiper": "5.4.5",
+        "vue-awesome-swiper": "^4.1.1",
+        "vuex": "^3.6.2"
+    },
+    "devDependencies": {
+        "eslint-config-prettier": "^7.2.0",
+        "eslint-plugin-prettier": "^3.3.1",
+        "prettier": "^2.2.1"
+    },
+    "engines": {
+        "node": ">= 12.0.0",
+        "npm": ">= 3.0.0"
+    },
+    "browserslist": [
+        "> 1%",
+        "last 2 versions",
+        "not ie <= 8"
+    ]
+}
